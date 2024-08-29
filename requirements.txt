@@ -1,0 +1,5 @@
+pip==24.2
+Django==4.2.15
+wheel==0.44
+setuptools==73.0.1
+
