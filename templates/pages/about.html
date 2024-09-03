@@ -1,4 +1,5 @@
 {% extends 'base.html'%} {% block content%}
+{% load static %}
 <section id="showcase-inner" class="py-5 text-white">
     <div class="container">
       <div class="row text-center">
@@ -36,7 +37,7 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
             pariatur!
           </p>
-          <img src="assets/img/about.jpg" alt="" />
+          <img src={% static "img/about.jpg" %} alt="" />
           <p class="mt-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Perspiciatis esse officia repudiandae ad saepe ex, amet neque quod
@@ -86,6 +87,7 @@
       <div class="row text-center">
         <div class="col-md-4">
           <img
+          {% comment %} edit kyle.jpg {% endcomment %}
             src="assets/img/realtors/kyle.jpg"
             alt=""
             class="rounded-circle mb-3"
@@ -101,6 +103,7 @@
 
         <div class="col-md-4">
           <img
+          {% comment %} edit mark.jpg {% endcomment %}
             src="assets/img/realtors/mark.jpg"
             alt=""
             class="rounded-circle mb-3"
@@ -114,6 +117,7 @@
 
         <div class="col-md-4">
           <img
+          {% comment %} edit jenny.jpg {% endcomment %}
             src="assets/img/realtors/jenny.jpg"
             alt=""
             class="rounded-circle mb-3"
