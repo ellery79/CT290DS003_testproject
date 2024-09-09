@@ -4,10 +4,8 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          {% comment %}Edit address {% endcomment %}
-          <h1 class="display-4">45 Prince Street</h1>
-          {% comment %}Edit district {% endcomment %}
-          <p class="lead"><i class="fas fa-map-marker"></i> Yau Tsim Mong</p>
+          <h1 class="display-4">{{listing.title}}</h1>
+          <p class="lead"><i class="fas fa-map-marker"></i> {{listing.district}}</p>
         </div>
       </div>
     </div>
@@ -24,8 +22,7 @@
           <li class="breadcrumb-item">
             <a href={% url 'listings' %}>Listings</a>
           </li>
-          {% comment %}Edit address {% endcomment %}
-          <li class="breadcrumb-item active">45 Prince Street</li>
+          <li class="breadcrumb-item active">{{listing.title}}</li>
         </ol>
       </nav>
     </div>
