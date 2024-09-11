@@ -12,6 +12,7 @@
                   type="text"
                   name="keywords"
                   class="form-control"
+                  value="{{values.keywords}}"
                   placeholder="Keyword (Bathrooms, ClubHouse, etc)"
                 />
               </div>
@@ -23,6 +24,7 @@
                   name="title"
                   class="form-control"
                   placeholder="Title"
+                  value="{{values.title}}"
                 />
               </div>
 
@@ -33,7 +35,9 @@
                     Districts (All)
                   </option>
                   {% for key, value in district_choices.items %}
-                  <option value="{{key}}">{{value}}</option>
+                  <option value="{{key}}"
+                  {% if key == values.District %} selected {% endif %}
+                  >{{value}}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -46,8 +50,10 @@
                   <option selected="true" disabled="disabled">
                     Bedrooms (Any)
                   </option>
-                  {% for _, value in bedroom_choices.items %}
-                  <option>{{value}}</option>
+                  {% for key, value in bedroom_choices.items %}
+                  <option value="{{key}}"
+                  {% if key == values.bedrooms %} selected {% endif %}
+                  >{{value}}</option>
                   {% endfor %}
 
                 </select>
@@ -58,7 +64,9 @@
                     Max Price (All)
                   </option>
                   {% for key, value in price_choices.items %}
-                  <option value="{{key}}">{{value}}</option>
+                  <option value="{{key}}"
+                  {% if key == values.price %} selected {% endif %}
+                  >{{value}}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -156,7 +164,11 @@
           <p>No Listing Available</p>
         </div>
         {% endif %}
+        
 
+      </div>
+      <div>
+        <p style="font-size: 30px;">Total results: {{total}}</p>
       </div>
     </div>
   </section>
