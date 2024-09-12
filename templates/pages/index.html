@@ -1,7 +1,12 @@
 {% extends 'base.html'%} 
 {% load humanize %}
+
+<!--add title to the tab-->
+{% block title %}Welcome{% endblock %}
+
 {% block content %}
 {% load static %}
+
 <!-- Showcase -->
 <section id="showcase">
   <div class="container text-center">
@@ -82,6 +87,8 @@
     </div>
   </div>
 </section>
+
+{% include 'partials/_alert.html' %}
 
 <!-- Listings -->
 <section id="listings" class="py-5">
