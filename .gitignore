@@ -11,6 +11,13 @@ db.sqlite3
 db.sqlite3-journal
 media
 
+# Ignore all migration files
+*/migrations/*.py
+*/migrations/*.pyc
+
+# But keep the __init__.py file
+!*/migrations/__init__.py
+
 # Sensitive info
 .env
 
