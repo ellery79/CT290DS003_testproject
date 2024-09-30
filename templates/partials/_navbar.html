@@ -2,9 +2,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container">
     {% comment %} we need to fix index.html{% endcomment %}
-    <a class="navbar-brand" href={% url 'index' %} >
+    <a class="navbar-brand" href="{% url 'index' %}" >
         {% comment %} we need to fix logo.png {% endcomment %}
-      <img src={% static "img/logo.png" %} class="logo" alt="" />
+      <img src="{% static 'img/logo.png' %}" class="logo" alt="" />
     </a>
     <button
       class="navbar-toggler"
